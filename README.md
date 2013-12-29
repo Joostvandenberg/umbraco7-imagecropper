@@ -1,11 +1,16 @@
-Image Cropper Property Editor for Umbraco V7
+Cropper Property Editor for Umbraco V7
 ============================================
 
 The Image Cropper property editor allows backoffice users to position pre-defined image crops on media items.
 Using the ImageProcessor the images are manipulated on-the-fly.
 
-Installation for V7.0.1
-=======================
+Requirements
+============
+1. Umbraco 7.0.1
+2. ImageProcessor.Web
+
+Installation
+============
 
 1. Install ImageProcessor and ImageProcessor.Web using Nuget (http://jimbobsquarepants.github.io/ImageProcessor/).
 2. Drop the folders from this repository into the corresponding folders of an Umbraco V7.0.1 instance.
@@ -18,7 +23,7 @@ Installation for V7.0.1
 Disclaimers
 ===========
 
-This is just something I've build to see if I could do it. There will probably be errors.
+Initial release, there will probably be errors. Feel free to make it better.
 
 Contact me
 ==========
