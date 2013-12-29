@@ -1,0 +1,21 @@
+<div class="umb-panel">
+    <div class="umb-panel-body no-header">
+        <ul class="unstyled">
+            <li ng-repeat="crop in model.value">
+                <h4>{{crop.id}} ({{crop.displaywidth}}x{{crop.displayheight}}, quality: {{crop.compression}})</h4>
+                <a href="{{mainimageurl}}?{{crop.processorurl}}" target="_blank">
+                    <img src="{{mainimageurl}}?{{crop.processorurl}}" />
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="umb-panel-footer">
+        <div class="umb-el-wrap umb-panel-buttons">
+            <div class="btn-toolbar umb-btn-toolbar pull-right">
+                <a href ng-click="close()" class="btn btn-link">
+                    <localize key="general_close">Close</localize>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

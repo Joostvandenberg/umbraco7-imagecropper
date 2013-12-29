@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Montagne.ImageCropperExtension;
+
+@{
+
+    Layout = null;
+
+    // Example: get imagecrops for media item
+
+    IPublishedContent myMedia = Umbraco.TypedMedia(1053);
+    
+    string jsonCrops = myMedia.GetPropertyValue<string>("crop");
+
+    // ImageCrop ImageCrop = new ImageCrop();
+    List<ImageCrop> ImageCrops = new List<ImageCrop>();
+
+    if (jsonCrops.IsJson())
+    {
+        // ImageCrop = jsonCrops.GetImageCrop("News"); get by id
+        ImageCrops = jsonCrops.GetImageCrops();
+        foreach (ImageCrop ic in ImageCrops)
+        {
+            <h2>@ic.processorurl</h2>
+            <img src="@myMedia.Url?@ic.processorurl" alt="your alt here" />
+        }
+    }
+
+    
+    
+    
+        
+}

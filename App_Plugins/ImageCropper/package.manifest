@@ -1,0 +1,58 @@
+{
+    propertyEditors: [
+        {
+		alias: "ImageCropper",
+		name: "Image Cropper",
+		editor: {
+		view: "~/App_Plugins/ImageCropper/imagecropper.html",
+		valueType: "JSON"
+		},
+		prevalues: {
+			fields: [
+				{
+					label: "Url format noresize",
+					description: "",
+					key: "urlformat",
+					view: "requiredfield",
+					validation: [
+						{
+							type: "Required" 
+						}						
+					]
+				},
+
+				{
+					label: "Url format resize",
+					description: "",
+					key: "urlformatresize",
+					view: "requiredfield",
+					validation: [
+						{
+							type: "Required" 
+						}						
+					]
+				},
+
+				{
+					label: "Settings",
+					description: "Predefined crops; For every crop you need the following parameters <name of crop>;<width>;<height>;<quality> for example: News;200;200;85",
+					key: "items",
+					view: "multivalues"
+				}
+			]
+		},
+		defaultConfig: {
+	    urlformat: "crop={x1},{y1},{width},{height}&quality={compression}",
+		urlformatresize: "width={resizewidth}&crop={x1},{y1},{width},{height}&quality={compression}"
+		}
+   }
+    ]
+    ,
+    javascript: [
+        '~/App_Plugins/ImageCropper/imagecropper.controller.js'
+    ]
+	,
+    css: [
+        '~/App_Plugins/ImageCropper/jquery.jcrop.min.css'
+    ]
+}

@@ -1,0 +1,15 @@
+<div ng-app ng-controller="ImageCropper">
+    <div style="display: block">
+        <select ng-change="selectAction()" ng-model="cropsetting" ng-options="obj.name for obj in cropsettings" style="margin-bottom: 15px;">
+            <option value="">Choose a crop setting</option>
+        <select>
+        <input type="button" class="btn" ng-click="scaleImage('-')" value="-">
+        <input type="button" class="btn" ng-click="scaleImage('+')" value="+">
+        <span>{{info}}</span>
+        <a href ng-click="openPreview()" ng-show="showPreview" class="btn btn-link">Preview</a>
+        <a href ng-click="reset()" ng-show="showReset" class="btn btn-link">Reset</a>
+    </div>
+    <img ng-src="{{mainimageurl}}" id="mainimage" />
+    <input ng-model="model.value" ng-show="false" type="text" name="{{model.alias}}" />
+</div>
+
