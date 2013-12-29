@@ -1,4 +1,4 @@
-Cropper Property Editor for Umbraco V7
+Image Cropper Property Editor
 ============================================
 
 The Image Cropper property editor allows backoffice users to position pre-defined image crops on media items.
@@ -23,7 +23,8 @@ Installation
 Disclaimers
 ===========
 
-Initial release, there will probably be errors. Feel free to make it better.
+Initial release, there will probably be errors.
+
 
 Contact me
 ==========
