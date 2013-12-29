@@ -7,11 +7,13 @@ Using the ImageProcessor the images are manipulated on-the-fly.
 Installation
 ============
 
-1. Install ImageProcessor and ImageProcessor.Web using Nuget (http://jimbobsquarepants.github.io/ImageProcessor/)
+1. Install ImageProcessor and ImageProcessor.Web using Nuget (http://jimbobsquarepants.github.io/ImageProcessor/).
 2. Drop the folders from this repository into the corresponding folders of an Umbraco V7.0.1 instance.
 3. Create a new data type of type "Image Cropper" in the "Developer" section in the Umbraco backoffice.
-4. Add the predefined crops settings
+4. Add the predefined crops settings.
 5. Assign the data type to an image mediatype in the "Settings" section of the Umbraco backoffice.
+6. Add some crops to a media item and save.
+7. Use the extension class to get the crops you have made in the property editor.
 
 Disclaimers
 ===========
