@@ -204,6 +204,8 @@ angular.module("umbraco").controller("ImageCropper",
                 }
                 var imageProp = _.find(props, function (item) {
                     if (item.alias === "umbracoWidth") {
+
+                        $scope.showCropper = true;
                         $scope.mainimagewidth = parseInt(item.value)
                         $scope.resizeimagewidth = 0;
                     }
